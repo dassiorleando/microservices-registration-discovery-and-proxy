@@ -1,0 +1,15 @@
+---
+applications:
+- name: consultation-service
+  memory: 512M
+  instances: 1
+  host: consultation-service-${random-word}
+  domain: cfapps.io
+  path: target/consultation-service.jar
+  services:
+      - eureka-service
+      - consultation-service-mongodb
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    DEBUG: "true"
+    debug: "true"
