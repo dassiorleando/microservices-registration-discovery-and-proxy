@@ -1,0 +1,52 @@
+info:
+  component: Zuul Server
+
+server:
+  port: ${vcap.application.port:8666}
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.eureka-service.credentials.uri:http://127.0.0.1:8761}/eureka/
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+  health:
+    sensitive: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+zuul:
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 60000
+  proxy:
+    routes:
+      consultation-service:
+        path: /consultation-service/**
+      photo-service:
+        path: /photo-service/**
+
+logging:
+  level:
+    ROOT: INFO
+    org.springframework.web: DEBUG
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${APPLICATION_DOMAIN}
+    nonSecurePort: 80
+
+

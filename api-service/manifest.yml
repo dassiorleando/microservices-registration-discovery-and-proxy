@@ -1,0 +1,15 @@
+---
+applications:
+- name: api-service
+  memory: 512M
+  instances: 1
+  host: api-service-${random-word}
+  domain: cfapps.io
+  path: target/api-service.jar
+  services:
+      - eureka-service
+      - api-service-mongodb
+  env:
+    SPRING_PROFILES_ACTIVE: cloud
+    DEBUG: "true"
+    debug: "true"
