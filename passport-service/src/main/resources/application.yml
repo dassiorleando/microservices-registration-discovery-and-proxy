@@ -1,3 +1,5 @@
+info:
+  component: Passport Service
 
 server:
   port: ${vcap.application.port:8050}

@@ -1,5 +1,5 @@
 info:
-  component: consultation Server with consultations and patients management.
+  component: Consultation Server with consultations and patients management just backend.
 
 spring:
     data:

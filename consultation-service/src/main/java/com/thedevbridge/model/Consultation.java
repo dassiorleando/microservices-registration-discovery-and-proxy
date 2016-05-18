@@ -10,7 +10,8 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.io.Serializable;
 
 /**
- * Created by marcel on 3/24/16.
+ * Represent a consultation as in an hospital.
+ * Created by dassiorleando on 3/24/16.
  */
 @Getter
 @Setter
@@ -24,5 +25,27 @@ public class Consultation implements Serializable{
     private String conclusion;
     @DBRef
     private Patient patient;
+    
+	public String getMotif() {
+		return motif;
+	}
+	
+	public void setMotif(String motif) {
+		this.motif = motif;
+	}
+	
+	public Patient getPatient() {
+		return patient;
+	}
+	
+	public void setPatient(Patient patient) {
+		this.patient = patient;
+	}
 
+	@Override
+	public String toString() {
+		return "Consultation [id=" + id + ", motif=" + motif + ", conclusion="
+				+ conclusion + ", patient=" + patient + "]";
+	}
+	
 }

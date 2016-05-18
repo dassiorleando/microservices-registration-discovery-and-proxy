@@ -12,7 +12,7 @@ import com.thedevbridge.model.Consultation;
 import com.thedevbridge.repository.ConsultationRepository;
 
 /**
- * Created by marcel on 3/24/16.
+ * Created by dassiorleando on 3/24/16.
  */
 @Service
 public class ConsultationService {

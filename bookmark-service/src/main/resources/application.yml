@@ -1,3 +1,5 @@
+info:
+  component: Bookmark Service
 
 server:
   port: ${vcap.application.port:9098}

@@ -1,3 +1,5 @@
+info:
+  component: Photo Service
 
 server:
   port: ${vcap.application.port:8060}

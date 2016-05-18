@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import com.thedevbridge.model.Patient;
 
 /**
- * Created by marcel on 3/24/16.
+ * Created by dassiorleando on 3/24/16.
  */
 //@Repository
 public interface PatientRepository extends MongoRepository<Patient, String> {

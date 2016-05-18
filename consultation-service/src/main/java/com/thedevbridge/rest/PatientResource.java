@@ -16,7 +16,7 @@ import com.thedevbridge.model.Patient;
 import com.thedevbridge.service.PatientService;
 
 /**
- * Created by marcel on 3/24/16.
+ * Created by dassiorleando on 3/24/16.
  */
 @RestController
 @RequestMapping(value = "/api/patients")

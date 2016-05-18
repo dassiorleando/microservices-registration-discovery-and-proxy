@@ -1,4 +1,5 @@
-
+info:
+  component: Eureka Server
 
 server:
   port: ${vcap.application.port:8761}
