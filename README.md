@@ -7,12 +7,11 @@ A repository for a blog on how Spring Cloud promotes resilient service-to-servic
 * https://github.com/joshlong/service-registration-and-discovery
 * + a consultation-service
 * +a zull server for proxying requests.
-* 
 
 # Test all
-* mvn clean install
-* 'cd eureka-service' and type 'java -jar target/eureka-service.jar eureka-service': same things for other modules, take a look at name of module before lauchn.
-* and in you browser lauch api-service(zull) module: http://localhost:8666 to test the proxy server.
+* `mvn clean install` in parent folder.
+* `cd eureka-service` and type `java -jar target/eureka-service.jar eureka-service`: same thing for other modules, take a look at name of module before.
+* and in you browser lauchn api-service(zull) module: `http://localhost:8666` to test the proxy server, knowing that the registry(eureka-service), consultation-service are started.
 
 
 The proxy server go and take consultations and patients in consultation-service servie via zuul.
