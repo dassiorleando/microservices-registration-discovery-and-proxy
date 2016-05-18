@@ -16,7 +16,7 @@ A repository for a blog on how Spring Cloud promotes resilient service-to-servic
 
 # What's happen
 
-* Creation of fake entities in consultation-services(both consultations and patients).
+* Creation of entities in consultation-services(both consultations and patients): database `consultation`.
 * The proxy server go and take consultations and patients in consultation-service servie via zuul.
 
 
